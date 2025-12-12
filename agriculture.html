@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>3D Farming Craft — Agriculture</title>
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="E:\HGM\agriculture.css">
+
+  <!-- THREE.js (required) -->
+  <script src="E:\HGM\agriculture.js"></script>
+</head>
+
+<body>
+
+  <!-- WebGL canvas -->
+  <canvas id="glcanvas" tabindex="0" aria-label="3D agriculture canvas"></canvas>
+
+  <!-- minimal inv/stats UI -->
+  <div id="invData" class="panel"></div>
+
+  <!-- hotbar (hidden until play begins) -->
+  <div id="hotbar" class="ui-hidden">
+    <div class="slot" id="hb1">Grass</div>
+    <div class="slot" id="hb2">Dirt</div>
+    <div class="slot" id="hb3">Farml</div>
+    <div class="slot" id="hb4">Seed</div>
+    <div class="slot" id="hb5">Hoe</div>
+    <div class="slot" id="hb6">Remove</div>
+  </div>
+
+  <!-- XP bar -->
+  <div id="xpBar" class="ui-hidden">
+    <div id="xpFill"></div>
+  </div>
+
+  <!-- crosshair (hidden until play begins) -->
+  <div id="crosshair" class="ui-hidden" aria-hidden="true"></div>
+
+  <!-- crop HUD (progress) -->
+  <div id="cropHUD" class="ui-hidden">
+    <div id="cropFill"></div>
+  </div>
+
+  <!-- small feedback -->
+  <div id="game-feedback" class="panel feedback"></div>
+
+  <!-- your helper/chat (kept) -->
+  <div class="chatbot-toggle" id="chatbot-toggle" aria-label="Open AI helper">AI Helper</div>
+  <div class="chatbot-panel" id="chatbot-panel" aria-live="polite">
+    <div class="chatbot-header">
+      <span>AI Helper</span>
+      <button type="button" id="chatbot-close" aria-label="Close chat">×</button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages"></div>
+    <form id="chatbot-form" class="chatbot-form">
+      <input id="chatbot-input" type="text" placeholder="Ask anything..." autocomplete="off" aria-label="Chat input">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- main game script -->
+  <script src="assets/js/agriculture.js"></script>
+  <!-- keep your chatbot.js if you have one (optional) -->
+  <script>
+    // If you have a chatbot file, load it after game script
+    // <script src="assets/js/chatbot.js"></script>
+  </script>
+</body>
+
+</html>
